@@ -3,13 +3,19 @@
         "./src/*"
     ],
     "compilerOptions": {
+        "module": "commonjs",
         "target": "ES5",
         "strict": true,
+        "skipLibCheck": true,
+        "allowJs": true,
         "lib": [
             "dom",
             "es2015"
         ],
         "jsx": "react",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "noEmit": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
     }
 }
