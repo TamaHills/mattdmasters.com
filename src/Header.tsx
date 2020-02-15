@@ -6,7 +6,6 @@ export function Header() {
   return (
     <header>
       <h1>Matt Masters.</h1>
-      <h2>Fullstack Web Developer.</h2>
       <nav>
         <NavTab to="/">{["HOME", "HELLO WORLD"]}</NavTab>
         <NavTab to="/lab">{["LAB", "CODE Experiments"]}</NavTab>

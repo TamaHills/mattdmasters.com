@@ -42,7 +42,6 @@ function Home() {
             <li>Django </li>
           </ul>
         </Func>
-
         <Func name="other">
           <ul>
             <li>Linux</li>
