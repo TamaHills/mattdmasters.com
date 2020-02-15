@@ -1,17 +1,38 @@
-import * as React from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./app.scss";
 
 export function Header() {
   return (
     <header>
-      <h1>Matt Masters.</h1>
+      <h1>Butt Masters.</h1>
       <h2>Fullstack Web Developer.</h2>
       <nav>
-        <NavLink to="/">HOME</NavLink>
-        <NavLink to="/lab">LAB</NavLink>
-        <NavLink to="/gallery">GALLERY</NavLink>
+        <NavTab to="/">{["HOME", "HELLO WORLD"]}</NavTab>
+        <NavTab to="/lab">{["LAB", "CODE Experiments"]}</NavTab>
+        <NavTab to="/gallery">{["GALLERY", "SELECTED PROJECTS"]}</NavTab>
       </nav>
     </header>
+  );
+}
+
+interface TabProps {
+  children: string[];
+  to: string;
+}
+
+function NavTab({ children, to }: TabProps) {
+  let [index, setIndex] = React.useState(0);
+  function mouseEnter() {
+    setIndex(1);
+  }
+  function mouseLeave() {
+    setIndex(0);
+  }
+
+  return (
+    <NavLink onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} to={to}>
+      {children[index]}
+    </NavLink>
   );
 }
