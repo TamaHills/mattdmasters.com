@@ -58,6 +58,8 @@ body {
     border-bottom: 1px dotted whitesmoke;
     margin: 20px 0;
     * {
+      text-transform: uppercase;
+      position: relative;
       justify-content: center;
       font-size: .8rem;
       align-items: center;
@@ -68,7 +70,7 @@ body {
       padding: 10px;
       &:hover {
         background-color: whitesmoke;
-        color: black;
+        color: #32322C;
       }
     }
   }
