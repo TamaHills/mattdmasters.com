@@ -1,11 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./app.scss";
 
 export function Header() {
+  let [clicks, setClicks] = React.useState(0);
+  let history = useHistory();
+  function click() {
+    if (clicks < 5) {
+      setClicks(clicks + 1);
+    } else {
+      history.push("/secret");
+      setClicks(0);
+    }
+  }
   return (
     <header>
-      <h1>Matt Masters.</h1>
+      <h1 onClick={click}>Matt Masters.</h1>
       <nav>
         <NavTab to="/">{["HOME", "HELLO WORLD"]}</NavTab>
         <NavTab to="/lab">{["LAB", "CODE Experiments"]}</NavTab>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { Header } from "./Header";
 import "./app.scss";
 
@@ -8,7 +8,10 @@ export default function App() {
     <div id="App">
       <Header />
       <Route path="/" component={Home} exact />
-      <footer>copyright 2020</footer>
+      <footer>
+        <span>Copyright 2020</span>
+        <Link to="/about-page">About</Link>
+      </footer>
     </div>
   );
 }

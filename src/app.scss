@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Alata|Fira+Code:400,600&display=swap');
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22211B;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +54,8 @@ body {
     margin: 7rem 0 20px 0;
   }
   footer {
+    flex-direction: row;
+    justify-content: space-between;
     border-top: 1px whitesmoke dotted;
     padding: 2rem 0;
   }
@@ -83,16 +93,27 @@ body {
         background-color: whitesmoke;
         color: #32322C;
       }
+      @media screen and (max-width: 700px) {
+        font-size: .5rem;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 5px;
+      }
     }
   }
-
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    header {
+      width: 90%;
+    }
+  }
 }
 
 #skills {
   font-size: 1rem;
   color: #13C4A3;
   ul {
-    padding: 15px 30px;
+    padding: 0 30px;
     li {
       color: #CF6448;
     }
@@ -132,6 +153,11 @@ body {
   }
   .equals, .arrow {
     color: #13C4A3;
+  }
+  @media screen and (max-width: 700px) {
+    * {
+      padding:.15rem;
+    }
   }
 }
 .bracket {
