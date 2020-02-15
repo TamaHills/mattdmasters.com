@@ -36,7 +36,13 @@ body {
   .container {
     background: #22211B;
     padding: 3rem;
-    
+    @media screen and (max-width: 700px) {
+      padding: 1.5rem;
+      font-size: .8rem
+    }
+    @media screen and (max-width: 500px) {
+      padding: .25rem;
+    }
     margin: 7rem 0 20px 0;
   }
   footer {
@@ -47,12 +53,13 @@ body {
     position: fixed;
     width: 80%;
     background: #32322C;
-    h1, h2 {
+    h1 {
       font-family: 'Alata', sans-serif;
       font-weight: 800;
-    }
-    h1 {
       padding: 25px 0 10px 0;
+      @media screen and (max-width: 500px) {
+        font-size: 1.2rem;
+      }
     }
   }
   nav {
@@ -85,9 +92,19 @@ body {
   font-size: 1rem;
   color: #13C4A3;
   ul {
-    padding-left: 30px;
+    padding: 15px 30px;
     li {
       color: #CF6448;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    padding: 15px;
+    font-size: .8rem
+  }
+  @media screen and (max-width: 500px) {
+    font-size: .65rem;
+    ul {
+      padding: 10px 25px;
     }
   }
 }
