@@ -5,7 +5,7 @@ import "./app.scss";
 export function Header() {
   return (
     <header>
-      <h1>Butt Masters.</h1>
+      <h1>Matt Masters.</h1>
       <h2>Fullstack Web Developer.</h2>
       <nav>
         <NavTab to="/">{["HOME", "HELLO WORLD"]}</NavTab>
